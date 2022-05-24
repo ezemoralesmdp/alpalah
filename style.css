@@ -1,5 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
+/* agregue 3 fonts diferentes ya les di aparencia  los 3 pero juga y fijate si te gusta uno mas */
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600&family=Nunito+Sans:ital,wght@1,400;1,600&family=Space+Mono:ital,wght@1,400;1,700&display=swap');
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Nunito Sans', sans-serif;
+font-family: 'Space Mono', monospace; */
 :root {
     --background: #11151c;
     --button: whitesmoke;
@@ -12,7 +16,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
     background: url(fondoBarra.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -51,6 +55,7 @@
     height: 50px;
     background: none;
     color: var(--button);
+    font-family: 'Space Mono', monospace;
 }
 
 .navbutton:hover {
@@ -74,7 +79,7 @@ header {
 header .logo {
     height: 250px;
     width: 250px;
-    border: 2px solid white;
+    border: 5px solid white;
     border-radius: 50%;
 }
 
@@ -82,31 +87,42 @@ header .title {
     font-size: 150px;
     background: none;
     color: white;
+    font-family: 'Space Mono', monospace;
 }
-
+/* le añadi un margin top y bottom para que haya mas separacion */
 .content {
     min-width: 90%;
     margin: auto;
     background: var(--content);
     padding: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 1.2rem;
+    margin-top: 1.2rem;
     color: white;
 }
-
+/* le aumente el margin asi la palabra Entrada no se sobrepone del navbar */
 .content h1 {
     justify-content: center;
     text-align: center;
     background: none;
-    margin: 5px 0;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
 }
-
+/* le aumente un poco el margin para que el navbar no se sopreponga en la palabra sin alcohol */
 .content h2 {
     justify-content: center;
     text-align: center;
     background: none;
-    margin: 5px 0;
+    margin-top: 2rem;
+    /* margin-bottom: 1rem; */
+    font-family: 'Montserrat', sans-serif;
 }
-
+/* esto es el borde sompra a los h2 */
+h2 span{
+    background: none;
+    background: rgba(0, 0, 0, 0.555);
+    padding: 0.4rem;
+    border-radius: 0.8rem;
+}
 .item {
     display: flex;
     flex-direction: column;
@@ -122,13 +138,14 @@ header .title {
     background: none;
     border-bottom: 1px dashed white;
 }
-
+/* disminui esto el padding de 20px a 16px */
 .container_items {
     background: none;
     background: rgba(0, 0, 0, 0.555);
-    padding: 20px;
+    padding: 1rem;
     border-radius: 15px;
 }
+
 
 #entrada {
     background: url('entrada.jpg');
@@ -168,10 +185,4 @@ button {
 
 a {
      background: none;
-}
-
-.QR{
-    width: 400px;
-    height: 400px;
-    background: none;
 }
