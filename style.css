@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
+
+:root {
+    --background: #11151c;
+    --button: whitesmoke;
+    --header: rgba(0, 0, 0, 0.281);
+    --background-container: #92594e49;
+    --content: #ffd6ba;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background: url(fondoBarra.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.container {
+    position: relative;
+    width: 90vw;
+    height: 100%;
+    background: var(--background-container);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    background: none;
+    z-index: 1;
+}
+
+.navbar .menuNavbar {
+    display: flex;    
+    justify-content: space-around;
+    background: rgba(0, 0, 0, 0.575);
+}
+
+.navbutton {
+    align-items: center;
+    border: none;
+    width: 150px;
+    height: 50px;
+    background: none;
+    color: var(--button);
+}
+
+.navbutton:hover {
+    background: rgba(255, 255, 255, 0.349);
+}
+
+header {
+    height: 50%;
+    width: 100%;
+    gap: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--header);
+    padding: 10px 0;
+    opacity: 1;
+    margin-top: 80px;
+    margin-bottom: 20px;
+}
+
+header .logo {
+    height: 250px;
+    width: 250px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+header .title {
+    font-size: 150px;
+    background: none;
+    color: white;
+}
+
+.content {
+    min-width: 90%;
+    margin: auto;
+    background: var(--content);
+    padding: 20px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.content h1 {
+    justify-content: center;
+    text-align: center;
+    background: none;
+    margin: 5px 0;
+}
+
+.content h2 {
+    justify-content: center;
+    text-align: center;
+    background: none;
+    margin: 5px 0;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    background: none;
+}
+
+.item h3 {
+    align-self: flex-start;
+    background: none;
+}
+
+.item h4 {
+    background: none;
+    border-bottom: 1px dashed white;
+}
+
+.container_items {
+    background: none;
+    background: rgba(0, 0, 0, 0.555);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+#entrada {
+    background: url('entrada.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#tragos {
+    background: url('tragos.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#platoPrincipal {
+    background: url('platoPrincipal.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#sinAlcohol {
+    background: url('sinAlcohol.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+     background: none;
+}
+
+.QR{
+    width: 400px;
+    height: 400px;
+    background: none;
+}
