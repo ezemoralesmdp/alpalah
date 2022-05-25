@@ -8,6 +8,10 @@
     --header: rgba(0, 0, 0, 0.281);
     --background-container: #92594e49;
     --content: #ffd6ba;
+    --martini:#ae2012;
+    --drink: #34a0a4;
+    --border-spinner-on: #8f5325;
+    --border-spinner-off: #8f532585;
 }
 
 /* -------------------------------------------- [general - all] -------------------------------------------- */
@@ -94,8 +98,90 @@
 .header__logo {
     height: 250px;
     width: 250px;
-    border: 5px solid white;
     border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    /* border del circulo */
+    border-top: 5px solid var(--border-spinner);
+    border-right: 5px solid var(--border-spinner-off);
+    border-bottom: 5px solid var(--border-spinner);
+    border-left: 5px solid var(--border-spinner-off);
+    /* animation */
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 3s;
+    animation-name: spinner-loading
+}
+
+@keyframes spinner-loading {
+    0% {
+        transform: rotate(0deg)
+    } to {
+        transform: rotate(1turn)
+    }
+}
+
+.logo__triangle {
+    margin-top: 50px;
+    width: 0;
+    height: 0;
+    border-top: 80px solid var(--martini);
+    border-right: 100px solid transparent;
+    border-left: 100px solid transparent;
+    border-bottom: 100px solid transparent;
+    position: relative;
+    background: none;
+}
+
+.logo__olive {
+    position: absolute;
+    bottom: 17px;
+    left: -9px;
+    height: 20px;
+    width: 30px;
+    background: green;
+    border-radius: 100px / 50px;
+    transform: rotate(-45deg);
+    z-index: 2;
+}
+
+.logo__drink {
+    position: relative;
+    top: -60px;
+    left: -59px;
+    width: 0;
+    height: 0;
+    border-top: 50px solid var(--drink);
+    border-right: 60px solid transparent;
+    border-left: 60px solid transparent;
+    border-bottom: 50px solid transparent;
+    position: relative;
+    background: none;
+    z-index: 1;
+}
+
+.logo__stem {
+    position: absolute; 
+    left: -4.5px; 
+    top: -50px; 
+    width: 10px;
+    height: 140px;
+    background: var(--martini);
+}
+
+.logo__littleTriangle {
+    position: absolute; 
+    left: -29.5px; 
+    top: 75px; 
+    width: 0;
+    height: 0;
+    border-right: 30px solid transparent;
+    border-bottom: 15px solid var(--martini);;
+    border-left: 30px solid transparent;
+    background: none;
 }
 
 .header__title {
