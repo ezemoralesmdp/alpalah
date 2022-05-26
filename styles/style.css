@@ -189,6 +189,7 @@
     background: none;
     color: white;
     font-family: 'Space Mono', monospace;
+    letter-spacing: 20px;
 }
 
 /* -------------------------------------------- [content] -------------------------------------------- */
@@ -233,6 +234,7 @@
     background: rgba(0, 0, 0, 0.548);
     padding: 15px;
     border-radius: 0.8rem;
+    border: 10px double #fff;
 }
 
 /* -------------------------------------------- [content__container] -------------------------------------------- */

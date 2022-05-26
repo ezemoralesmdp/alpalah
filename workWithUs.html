@@ -68,8 +68,11 @@
                     <label for="email">Correo electrónico</label>
                     <input class="form__input" type="email" id="email" name="main_email" placeholder="Tu correo electrónico..." required>
 
-                    <label for="subject">Contanos de vos...</label>
-                    <textarea id="subject" name="subject" placeholder="Escribe algo..." style="height:200px" required></textarea>
+                    <label for="subject">Contanos de vos... (máx. 250 caracteres)</label>
+                    <textarea id="subject" name="subject" placeholder="Escribe algo..." maxlength="250" required></textarea>
+
+                    <label for="file">Carga tu curriculum (.pdf)</label>
+                    <input type="file" name="archivosubido" required>
                 
                     <center><input type="submit" value="Enviar"></input></center>
 
