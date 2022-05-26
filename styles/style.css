@@ -8,8 +8,8 @@
     --header: rgba(0, 0, 0, 0.281);
     --background-container: #92594e49;
     --content: #ffd6ba;
-    --martini:#ae2012;
-    --drink: #34a0a4;
+    --martini:#ffffff86;
+    --drink: #def1f1;
     --border-spinner-on: #8f5325;
     --border-spinner-off: #8f532585;
 }
@@ -228,6 +228,13 @@
     border-radius: 0.8rem;
 }
 
+.content__text {
+    background: none;
+    background: rgba(0, 0, 0, 0.548);
+    padding: 15px;
+    border-radius: 0.8rem;
+}
+
 /* -------------------------------------------- [content__container] -------------------------------------------- */
 
 .content__container {
@@ -323,3 +330,13 @@
     background: none;
 }
 
+/* -------------------------------------------- [curriculum] -------------------------------------------- */
+
+#curriculum {
+    max-width: 90%;
+    background: url('../images/workWithUs.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}

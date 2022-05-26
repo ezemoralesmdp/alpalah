@@ -1,0 +1,52 @@
+
+
+/* cambiar el qr */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.qrcodeimages {
+    display: flex;
+    flex-direction: column;
+    background: url(../images/QRCODE.png)no-repeat center;
+    width: 100vw;
+    height: 50vh;
+
+}
+
+.qrcodetitle {
+    font-size: 60px;
+}
+
+.qrcodetext {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.redirect {
+    justify-content: center;
+    text-align: center;
+    width: 100vw;
+    height: 20vh;
+    margin-top: 3rem;
+}
+
+.redirectbutton {
+    background-color: rgb(24, 21, 21);
+    border: none;
+    width: 200px;
+    height: 75px;
+    font-size: 30px;
+    color: rgb(250, 250, 250);
+    margin-bottom: 1.5rem;
+}
+
+.redirectbutton:hover {
+    background: rgb(63, 59, 59);
+    cursor: pointer;
+}
