@@ -7,6 +7,7 @@
     --button: whitesmoke;
     --header: rgba(0, 0, 0, 0.281);
     --background-container: #92594e49;
+    --background-footer: #92594eb7;
     --content: #ffd6ba;
     --martini:#ffffff86;
     --drink: #def1f1;
@@ -189,7 +190,7 @@
     background: none;
     color: white;
     font-family: 'Space Mono', monospace;
-    letter-spacing: 20px;
+    letter-spacing: 10px;
 }
 
 /* -------------------------------------------- [content] -------------------------------------------- */
@@ -308,6 +309,7 @@
 
 .footer {
     display: flex;
+    justify-content: space-between;
     width: 90vw;
     height: 250px;
     margin: auto;
@@ -315,6 +317,17 @@
     padding: 20px;
     margin-bottom: 1.2rem;
     margin-top: 1.2rem;
+}
+
+.footer div {
+    width: 100%;
+    margin: 0 20px;
+    border-radius: 5px;
+    background: none
+}
+
+.footer a {
+    background: none
 }
 
 .footer__content {
@@ -330,6 +343,51 @@
     position: absolute;
     bottom: 0;
     background: none;
+}
+
+#footer__left {
+    /* background: var(--background-footer); */
+    background: url('../images/workWithUs.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer__left span {
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.39);
+    border-radius: 5px;
+    font-size: 30px;
+}
+
+#footer__left a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#footer__left:hover {
+    /* border: inset 5px double white; */
+    box-shadow: inset 0 0 0 10px rgba(255, 255, 255, 0.726);
+}
+
+#footer__center {
+    background: white;
+}
+
+#footer__center iframe {
+    height: 100%;
+    width: 100%;
+}
+
+#footer__right {
+    background: white;
 }
 
 /* -------------------------------------------- [curriculum] -------------------------------------------- */
