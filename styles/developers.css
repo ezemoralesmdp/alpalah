@@ -1,0 +1,61 @@
+.content__profiles {
+    background: #92594e49;
+    display: flex;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.profile__left, .profile__right {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: #e29578;
+    margin: 3rem;
+    border-radius: 10%;
+    border: 20px double whitesmoke;
+}
+
+center {
+    background: none;
+}
+
+.profile__image {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid whitesmoke;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.profile__image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile__information {
+    margin: 0 30px 30px;
+}
+
+.profile__left li, .profile__right li {
+    font-size: 25px;
+}
+
+.profile__left li:nth-child(odd), .profile__right li:nth-child(odd) {
+    background: #b5838d;
+    list-style: none;
+    color: black;
+}
+
+.profile__left li:nth-child(even), .profile__right li:nth-child(even) {
+    background: #e5989b;
+    list-style: none;
+    color: black;
+}
