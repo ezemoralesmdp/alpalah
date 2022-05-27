@@ -244,6 +244,11 @@ a:visited {
     border: 10px double #fff;
 }
 
+.content__text .text__signature {
+    text-align: right;
+    font-weight: 700;
+}
+
 /* -------------------------------------------- [content__container] -------------------------------------------- */
 
 .content__container {
