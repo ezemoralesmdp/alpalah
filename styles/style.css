@@ -7,7 +7,14 @@
     --button: whitesmoke;
     --header: rgba(0, 0, 0, 0.281);
     --background-container: #92594e49;
+    --content-container: rgba(0, 0, 0, 0.555);
+    --background-footer: #92594eb7;
     --content: #ffd6ba;
+    --martini:#ffffff86;
+    --drink: #def1f1;
+    --border-spinner-on: #8f5325;
+    --border-spinner-off: #8f532585;
+    --fa-brands: lightgray;
 }
 
 /* -------------------------------------------- [general - all] -------------------------------------------- */
@@ -24,10 +31,32 @@
     background-size: cover;
 }
 
+html {
+    scroll-behavior: smooth;
+
+}
+
 .fa-solid {
     background: none;
 }
 
+a:visited {
+    color: lightgray;
+}
+
+.fa-circle-chevron-up{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    font-size: 35px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    color: aliceblue;
+}
+.fa-circle-chevron-up:hover{
+    filter: drop-shadow(1px 1px 3px #888);
+    cursor: pointer;
+}
 /* -------------------------------------------- [container] -------------------------------------------- */
 
 .container {
@@ -94,8 +123,90 @@
 .header__logo {
     height: 250px;
     width: 250px;
-    border: 5px solid white;
     border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    /* border del circulo */
+    border-top: 5px solid var(--border-spinner);
+    border-right: 5px solid var(--border-spinner-off);
+    border-bottom: 5px solid var(--border-spinner);
+    border-left: 5px solid var(--border-spinner-off);
+    /* animation */
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 3s;
+    animation-name: spinner-loading
+}
+
+@keyframes spinner-loading {
+    0% {
+        transform: rotate(0deg)
+    } to {
+        transform: rotate(1turn)
+    }
+}
+
+.logo__triangle {
+    margin-top: 50px;
+    width: 0;
+    height: 0;
+    border-top: 80px solid var(--martini);
+    border-right: 100px solid transparent;
+    border-left: 100px solid transparent;
+    border-bottom: 100px solid transparent;
+    position: relative;
+    background: none;
+}
+
+.logo__olive {
+    position: absolute;
+    bottom: 17px;
+    left: -9px;
+    height: 20px;
+    width: 30px;
+    background: green;
+    border-radius: 100px / 50px;
+    transform: rotate(-45deg);
+    z-index: 2;
+}
+
+.logo__drink {
+    position: relative;
+    top: -60px;
+    left: -59px;
+    width: 0;
+    height: 0;
+    border-top: 50px solid var(--drink);
+    border-right: 60px solid transparent;
+    border-left: 60px solid transparent;
+    border-bottom: 50px solid transparent;
+    position: relative;
+    background: none;
+    z-index: 1;
+}
+
+.logo__stem {
+    position: absolute; 
+    left: -4.5px; 
+    top: -50px; 
+    width: 10px;
+    height: 140px;
+    background: var(--martini);
+}
+
+.logo__littleTriangle {
+    position: absolute; 
+    left: -29.5px; 
+    top: 75px; 
+    width: 0;
+    height: 0;
+    border-right: 30px solid transparent;
+    border-bottom: 15px solid var(--martini);;
+    border-left: 30px solid transparent;
+    background: none;
 }
 
 .header__title {
@@ -103,6 +214,7 @@
     background: none;
     color: white;
     font-family: 'Space Mono', monospace;
+    letter-spacing: 10px;
 }
 
 /* -------------------------------------------- [content] -------------------------------------------- */
@@ -142,11 +254,24 @@
     border-radius: 0.8rem;
 }
 
+.content__text {
+    background: none;
+    background: rgba(0, 0, 0, 0.548);
+    padding: 15px;
+    border-radius: 0.8rem;
+    border: 10px double #fff;
+}
+
+.content__text .text__signature {
+    text-align: right;
+    font-weight: 700;
+}
+
 /* -------------------------------------------- [content__container] -------------------------------------------- */
 
 .content__container {
     background: none;
-    background: rgba(0, 0, 0, 0.555);
+    background: var(--content-container);
     padding: 1rem;
     border-radius: 15px;
 }
@@ -161,6 +286,7 @@
 
 .container__item:hover{
     box-shadow: inset 0 0 0 1px white;
+    filter: drop-shadow(1px 1px 3px #888);
     padding-left: 5px;
 }
 
@@ -213,6 +339,7 @@
 
 .footer {
     display: flex;
+    justify-content: space-between;
     width: 90vw;
     height: 250px;
     margin: auto;
@@ -220,6 +347,17 @@
     padding: 20px;
     margin-bottom: 1.2rem;
     margin-top: 1.2rem;
+}
+
+.footer div {
+    width: 100%;
+    margin: 0 20px;
+    border-radius: 5px;
+    background: none
+}
+
+.footer a {
+    background: none
 }
 
 .footer__content {
@@ -237,3 +375,118 @@
     background: none;
 }
 
+#footer__left {
+    background: url('../images/workWithUs.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer__left a {
+    background: rgba(0, 0, 0, 0.39);
+    text-align: center;
+    width: 100%;
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 30px;
+}
+
+#footer__left a:hover {
+    border-top: 2px solid rgba(255, 255, 255, 0.726);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.726);
+    filter: drop-shadow(1px 1px 3px #888)
+}
+
+#footer__left:hover {
+    box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.726);
+    filter: drop-shadow(1px 1px 3px #888)
+}
+
+#footer__center {
+    background: white;
+}
+
+#footer__center iframe {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+}
+
+#footer__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--content-container);
+    border-radius: 5px;
+}
+
+#footer__right .right__top {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-size: 41px;
+}
+
+#footer__right .right__top a {
+    color: var(--fa-brands);
+}
+
+#footer__right .right__top a .fa-brands:hover {
+    background: none;
+    filter: drop-shadow(1px 1px 3px #888)
+}
+
+#footer__right .right__top .fa-brands {
+    background: none;
+}
+
+#footer__right .right__bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#footer__right .right__bottom:hover {
+    filter: drop-shadow(1px 1px 3px #888)
+}
+
+#footer__right .developerTeam a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+#footer__right .right__bottom .fa-solid {
+    background: none;
+    font-size: 50px;
+}
+
+#footer__right .right__text {
+    font-size: 30px;
+    color: white;
+}
+
+/* -------------------------------------------- [curriculum] -------------------------------------------- */
+
+#curriculum {
+    max-width: 90%;
+    background: url('../images/workWithUs.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}

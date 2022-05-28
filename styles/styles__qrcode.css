@@ -1,0 +1,221 @@
+/* cambiar el qr */
+
+:root {
+    --grey:rgba(0, 0, 0, 0.548);
+}
+* {
+    margin: 0.5rem;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: antiquewhite;
+    background: var(--grey);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.qrcode{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        height: 100vh;
+        width: 100vw;
+        font-size: 1.2rem;
+    }
+
+.qrcode__img{
+    border: 4px dashed rgb(0, 0, 0) ;
+}
+.qrcode__text{
+
+        border-radius: 0.8rem;
+
+ }
+
+.qrcode__title{ 
+font-size: 5rem;
+color: rgb(31, 31, 31);
+animation: move linear 2500ms infinite;
+}
+@keyframes move {
+    0% {
+      text-shadow:
+        4px -4px 0 hsla(0, 100%, 50%, 1), 
+        3px -3px 0 hsla(0, 100%, 50%, 1), 
+        2px -2px 0 hsla(0, 100%, 50%, 1), 
+        1px -1px 0 hsla(0, 100%, 50%, 1),
+        -4px 4px 0 hsla(180, 100%, 50%, 1), 
+        -3px 3px 0 hsla(180, 100%, 50%, 1), 
+        -2px 2px 0 hsla(180, 100%, 50%, 1), 
+        -1px 1px 0 hsla(180, 100%, 50%, 1)
+      ;
+    }
+    25% {    
+      text-shadow:      
+        -4px -4px 0 hsla(180, 100%, 50%, 1), 
+        -3px -3px 0 hsla(180, 100%, 50%, 1), 
+        -2px -2px 0 hsla(180, 100%, 50%, 1), 
+        -1px -1px 0 hsla(180, 100%, 50%, 1),
+        4px 4px 0 hsla(0, 100%, 50%, 1), 
+        3px 3px 0 hsla(0, 100%, 50%, 1), 
+        2px 2px 0 hsla(0, 100%, 50%, 1), 
+        1px 1px 0 hsla(0, 100%, 50%, 1)      
+      ;
+    }
+    50% {
+      text-shadow:
+        -4px 4px 0 hsla(0, 100%, 50%, 1), 
+        -3px 3px 0 hsla(0, 100%, 50%, 1), 
+        -2px 2px 0 hsla(0, 100%, 50%, 1), 
+        -1px 1px 0 hsla(0, 100%, 50%, 1),
+        4px -4px 0 hsla(180, 100%, 50%, 1), 
+        3px -3px 0 hsla(180, 100%, 50%, 1), 
+        2px -2px 0 hsla(180, 100%, 50%, 1), 
+        1px -1px 0 hsla(180, 100%, 50%, 1)
+      ;
+    }
+    75% {
+      text-shadow:
+        4px 4px 0 hsla(180, 100%, 50%, 1), 
+        3px 3px 0 hsla(180, 100%, 50%, 1), 
+        2px 2px 0 hsla(180, 100%, 50%, 1), 
+        1px 1px 0 hsla(180, 100%, 50%, 1),
+        -4px -4px 0 hsla(0, 100%, 50%, 1), 
+        -3px -3px 0 hsla(0, 100%, 50%, 1), 
+        -2px -2px 0 hsla(0, 100%, 50%, 1), 
+        -1px -1px 0 hsla(0, 100%, 50%, 1)      
+      ;
+    }
+    100% {
+      text-shadow:
+        4px -4px 0 hsla(0, 100%, 50%, 1), 
+        3px -3px 0 hsla(0, 100%, 50%, 1), 
+        2px -2px 0 hsla(0, 100%, 50%, 1), 
+        1px -1px 0 hsla(0, 100%, 50%, 1),
+        -4px 4px 0 hsla(180, 100%, 50%, 1), 
+        -3px 3px 0 hsla(180, 100%, 50%, 1), 
+        -2px 2px 0 hsla(180, 100%, 50%, 1), 
+        -1px 1px 0 hsla(180, 100%, 50%, 1)
+      ;
+    }  
+  }
+
+
+.qrcode__subtitle{
+    /* background: none;
+    background: var(--grey); */
+    padding: 1rem;
+    border-radius: 0.8rem;
+}
+
+.redirect {
+    justify-content: center;
+    text-align: center;
+}
+
+.redirectbutton {
+    border: none;
+    border-radius: 0.8rem;
+    font-size: 40px;
+    padding: 0.6rem;
+    color: rgb(37, 37, 37);
+    animation-name: rainbow;
+    animation: rainbow 2.5s linear;
+    animation-iteration-count: infinite;
+    /* background: none;
+    background-color: var(--grey); */
+}
+@keyframes rainbow{
+    100%,0%{
+        color: rgb(255,0,0);
+    }
+    8%{
+        color: rgb(255,127,0);
+    }
+    16%{
+        color: rgb(255,255,0);
+    }
+    25%{
+        color: rgb(127,255,0);
+    }
+    33%{
+        color: rgb(0,255,0);
+    }
+    41%{
+        color: rgb(0,255,127);
+    }
+    50%{
+        color: rgb(0,255,255);
+    }
+    58%{
+        color: rgb(0,127,255);
+    }
+    66%{
+        color: rgb(0,0,255);
+    }
+    75%{
+        color: rgb(127,0,255);
+    }
+    83%{
+        color: rgb(255,0,255);
+    }
+    91%{
+        color: rgb(255,0,127);
+    }
+}
+
+
+.redirectbutton:hover {
+    cursor: pointer;
+    animation-name: rainbow-bg;
+    animation: rainbow-bg 2.5s linear;
+    animation-iteration-count: infinite;
+}
+@keyframes rainbow-bg{
+    100%,0%{
+        background: none;
+        background-color: rgb(255,0,0);
+    }
+    8%{
+        background-color: rgb(255,127,0);
+    }
+    16%{
+        background-color: rgb(255,255,0);
+    }
+    25%{
+        background-color: rgb(127,255,0);
+    }
+    33%{
+        background-color: rgb(0,255,0);
+    }
+    41%{
+        background-color: rgb(0,255,127);
+    }
+    50%{
+        background-color: rgb(0,255,255);
+    }
+    58%{
+        background-color: rgb(0,127,255);
+    }
+    66%{
+        background-color: rgb(0,0,255);
+    }
+    75%{
+        background-color: rgb(127,0,255);
+    }
+    83%{
+        background-color: rgb(255,0,255);
+    }
+    91%{
+        background-color: rgb(255,0,127);
+    }
+}
+
+.redirect__text{
+    /* background: var(--grey); */
+    padding: 1rem;
+    border-radius: 0.8rem;
+}
+
