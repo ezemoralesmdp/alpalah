@@ -31,12 +31,32 @@
     background-size: cover;
 }
 
+html {
+    scroll-behavior: smooth;
+
+}
+
 .fa-solid {
     background: none;
 }
 
 a:visited {
     color: lightgray;
+}
+
+
+.fa-circle-chevron-up{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    font-size: 35px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    color: aliceblue;
+}
+.fa-circle-chevron-up:hover{
+    filter: drop-shadow(1px 1px 3px #888);
+    cursor: pointer;
 }
 
 /* -------------------------------------------- [container] -------------------------------------------- */
@@ -472,6 +492,4 @@ a:visited {
     -o-background-size: cover;
     background-size: cover;
 }
-
-/* -------------------------------------------- [developers] -------------------------------------------- */
 
