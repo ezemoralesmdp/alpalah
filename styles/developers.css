@@ -3,10 +3,10 @@
     --background-container: #92594e49;
     --background: #e0afa0d3;
     --text:#8a817c;
-    --text__middle:#463f3a ;
-    --border__img:#bcb8b1f5 ;
-    --border__div:#f4f3ee94 ;
-    --text__color:#ebebeb ;
+    --text__middle:#463f3a;
+    --border__img:#bcb8b1f5;
+    --border__div:#f4f3ee94;
+    --text__color:#ebebeb;
 }
 
 
@@ -28,6 +28,7 @@
     margin: 3rem;
     border-radius: 10%;
     border: 20px double var(--border__div);
+    box-shadow: 5px 4px 5px rgba(0, 0, 0, 0.575);
 }
 
 center {
@@ -65,27 +66,30 @@ center {
     text-align: center;
 }
 
-.information__social{
+.information__social {
     font-size: 41px;
     text-align: center;
     background: var(--text__middle);
-    border-bottom-left-radius:  20px ;
-    border-bottom-right-radius:  20px ;
-
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
-.information__social a{
+.profile__information .information__message {
+    font-size: 14px;
+    padding: 3px 10px;
+}
+
+.information__social a {
     background: none;
 }
 
-.information__social .fa-brands, .fa-envelope{
+.information__social .fa-brands, .fa-envelope {
     margin: 0 15px;
     color: whitesmoke;
     background: none;
-
 }
 
-.information__social .fa-brands:hover, .information__social .fa-solid:hover{
+.information__social .fa-brands:hover, .information__social .fa-solid:hover {
     filter: drop-shadow(1px 1px 3px #888);
     cursor: pointer;
 }

@@ -4,7 +4,6 @@ p {
 
 :root {
     --form__container: rgba(0, 0, 0, 0.671);
-
 }
 
 /* -------------------------------------------- [form] -------------------------------------------- */
@@ -55,10 +54,8 @@ p {
     font-weight: 900;   
 }
 
-.form__container input[type=text], input[type=date], input[type=email], input[type=textarea]   {
+.form__container input[type=text], input[type=date], input[type=email], input[type=textarea] {
     background-color: white;
     color: black;
     margin: 2px 0;
 }
-
-

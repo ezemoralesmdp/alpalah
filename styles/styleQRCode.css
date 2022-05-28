@@ -53,21 +53,25 @@
     background: none;
 }
 
-.elementstext, .elementsqr{
+.elementstext, .elementsqr {
     margin: 0 20px;
     background: none;
 }
 
-.elementsqr:hover{
+.elementsqr:hover {
     filter: drop-shadow(1px 1px 25px #888);
     cursor: pointer;
 }
 
-.elementsqr a{
+.elementsqr a {
     background: none;
 }
 
 .containerghostBox {
     height: 5vh;
     width: 100%;
+}
+
+.left__bottom .fa-brands {
+    background: none;
 }
