@@ -44,6 +44,7 @@ a:visited {
     color: lightgray;
 }
 
+
 .fa-circle-chevron-up{
     position: fixed;
     bottom: 0;
@@ -57,6 +58,7 @@ a:visited {
     filter: drop-shadow(1px 1px 3px #888);
     cursor: pointer;
 }
+
 /* -------------------------------------------- [container] -------------------------------------------- */
 
 .container {
@@ -490,3 +492,4 @@ a:visited {
     -o-background-size: cover;
     background-size: cover;
 }
+
