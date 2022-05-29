@@ -105,6 +105,13 @@ a:visited {
     cursor: pointer;
 }
 
+.navbar__input {
+    background: whitesmoke;
+    height: 40px;
+    position: relative;
+    top: 5px;
+}
+
 /* -------------------------------------------- [header] -------------------------------------------- */
 
 .header {
@@ -282,6 +289,7 @@ a:visited {
     background: none;
     margin-bottom: 5px;
     margin-top: 5px;
+    cursor: pointer;
 }
 
 .container__item:hover {
@@ -294,6 +302,10 @@ a:visited {
 .container__h3 {
     align-self: flex-start;
     background: none;
+}
+
+.container__h3 span {
+    background: none;   
 }
 
 .container__h4 {
