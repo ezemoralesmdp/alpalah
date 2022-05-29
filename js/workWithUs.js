@@ -2,11 +2,18 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const myForm = document.querySelector('form');
     const inputName = myForm.querySelector('#fname');
-    const genre = myForm.querySelector('#genre');
+    const genre = document.querySelectorAll('input[type="radio"]');    
+    let actualValue = '';
     const date = myForm.querySelector('#date');
     const email = myForm.querySelector('#email');
     const personalDescription = myForm.querySelector('#personalDescription');
     const submitButton = myForm.querySelector('#submit');
+
+    genre.forEach((radio) => {
+        radio.addEventListener('click', (event) => {
+            actualValue = event.target.value;
+        })
+    });
 
     submitButton.addEventListener('click', (event) => {
 
@@ -14,7 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
         const applicant = {
             fullName: inputName.value,
-            genre: genre.value,
+            genre: actualValue,
             date: date.value,
             email: email.value,
             personalDescription: personalDescription.value,
