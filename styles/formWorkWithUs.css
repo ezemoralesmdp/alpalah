@@ -59,3 +59,9 @@ p {
     color: black;
     margin: 2px 0;
 }
+
+.form__container .form__genre {
+    display: flex;
+    flex-direction: column;
+    background: none;
+}
