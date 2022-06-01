@@ -8,6 +8,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const email = myForm.querySelector('#email');
     const personalDescription = myForm.querySelector('#personalDescription');
     const submitButton = myForm.querySelector('#submit');
+    const applicants = [];
 
     genre.forEach((radio) => {
         radio.addEventListener('click', (event) => {
@@ -17,7 +18,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     submitButton.addEventListener('click', (event) => {
 
-        // event.preventDefault();
+        event.preventDefault();
 
         const applicant = {
             fullName: inputName.value,
@@ -32,5 +33,9 @@ window.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('Date', JSON.stringify(applicant.date));
         localStorage.setItem('E-mail', JSON.stringify(applicant.email));
         localStorage.setItem('Personal Description', JSON.stringify(applicant.personalDescription));
+
+        const oldData = JSON.parse(localStorage.getItem('applicant')) || [];
+        const newArray = [...oldData, applicant];
+        localStorage.setItem('applicant', JSON.stringify(newArray));
     })
 })
