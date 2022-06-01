@@ -43,19 +43,21 @@ a:visited {
     color: lightgray;
 }
 
-.fa-circle-chevron-up{
+#chevron, .fa-circle-chevron-up{
+    display: flex;
     position: fixed;
     bottom: 0;
     right: 0;
     font-size: 35px;
-    margin-right: 10px;
+    margin-right: 6px;
     margin-bottom: 10px;
     color: aliceblue;
+    cursor: pointer;
+    transition: all 600ms ease;
 }
 
-.fa-circle-chevron-up:hover{
+#chevron, .fa-circle-chevron-up:hover{
     filter: drop-shadow(1px 1px 3px #888);
-    cursor: pointer;
 }
 
 /* -------------------------------------------- [container] -------------------------------------------- */
@@ -70,6 +72,22 @@ a:visited {
     flex-direction: column;
     margin-bottom: 20px;
 }
+/* -------------------------------------------- [scroll] -------------------------------------------- */
+
+body::-webkit-scrollbar{
+    width: 8px;
+}
+body::-webkit-scrollbar-track{
+    background: rgb(46, 46, 46);
+}
+body::-webkit-scrollbar-thumb{
+    background: linear-gradient(var(--background), var(--border-spinner-on)); ;
+    border-radius: 80vw;
+}
+
+body::-webkit-scrollbar-thumb:hover{
+    background:var(--background); ;
+}
 
 /* -------------------------------------------- [navbar] -------------------------------------------- */
 
@@ -82,34 +100,82 @@ a:visited {
 
 .navbar a {
     background: none;
+    text-decoration: none
 }
 
 .navbar__menu {
-    display: flex;    
+    display: flex;
     justify-content: space-around;
     background: rgba(0, 0, 0, 0.575);
 }
 
 .navbar__button {
+    position: relative;
+    display: block;
     align-items: center;
+    justify-content: center;
     border: none;
-    width: 150px;
+    width: 160px;
     height: 50px;
     background: none;
     color: var(--button);
     font-family: 'Space Mono', monospace;
-}
-
-.navbar__button:hover {
-    background: rgba(255, 255, 255, 0.349);
     cursor: pointer;
+    overflow: hidden;
+    transition: 1s all ease;
 }
+/* -------------------------------------------- [navbar__animates] -------------------------------------------- */
+
+  .navbar__button::before{
+    background: rgba(255, 255, 255, 0.349);
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    transition: all 0.8s ease;
+  }
+
+  .navbar__button::before{
+    width: 100%;
+    height: 0%;
+    transform: translate(-50%,-50%) rotate(45deg);
+  }
+  .navbar__button:hover::before{
+    height: 380%;
+  }
+/* -------------------------------------------- [navbar__input] -------------------------------------------- */
+
 
 .navbar__input {
     background: whitesmoke;
     height: 40px;
     position: relative;
     top: 5px;
+}
+
+/* -------------------------------------------- [navbar__titles] -------------------------------------------- */
+
+.navbar__menu, #navbar__home{
+    flex: 1;
+    text-align: center;
+}
+
+.navbar__title{
+    flex: 8;
+    display: flex;
+    background: none ;
+    color:var(--button);
+    justify-content: center;
+}
+
+.title__workWhitUs{
+    background: none;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+    margin-right: 200px;
 }
 
 /* -------------------------------------------- [header] -------------------------------------------- */
@@ -127,7 +193,9 @@ a:visited {
     margin-top: 80px;
     margin-bottom: 20px;
 }
-
+.header__title{
+    text-shadow: 10px 10px var(--background) ;
+}
 .header__logo {
     height: 250px;
     width: 250px;

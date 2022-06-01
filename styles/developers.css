@@ -1,7 +1,7 @@
 
 :root {
     --background-container: #92594e49;
-    --background: #e0afa0d3;
+    --background-developers: #e0afa0d3;
     --text:#8a817c;
     --text__middle:#463f3a;
     --border__img:#bcb8b1f5;
@@ -24,7 +24,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    background: var(--background);
+    background: var(--background-developers);
     margin: 3rem;
     border-radius: 10%;
     border: 20px double var(--border__div);

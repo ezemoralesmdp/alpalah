@@ -10,16 +10,19 @@
     <title>Alpalah - Work with us</title>
 </head>
 
-<body id="#body">
-
+<body>
     <nav class="navbar">
         
         <div class="navbar__menu">
-            <a href="menu.html"><button class="navbar__button"><i class="fa-solid fa-house"></i> Inicio</button></a>
-            <a href="#entrada"><button class="navbar__button"><i class="fa-solid fa-utensils"></i> Entradas</button></a>
-            <a href="#platoPrincipal"><button class="navbar__button"><i class="fa-solid fa-burger"></i> Plato principal</button></a>
-            <a href="#tragos"><button class="navbar__button"><i class="fa-solid fa-martini-glass-citrus"></i> Cocktails</button></a>
-            <a href="#sinAlcohol"><button class="navbar__button"><i class="fa-solid fa-glass-water"></i> Sin alcohol</button></a>
+            <a href="menu.html" id="navbar__home"><button class="navbar__button" id="navbar__home"><i class="fa-solid fa-house"></i> Inicio</button></a>
+
+            <!-- <div class="navbar__title">
+                <a href="workWithUs.html" id="title__anchor"><button class="title__button"><h1 class="title__workWhitUs"><i class="fa-solid fa-briefcase"></i> Bolsa de trabajo</h1></button></a>
+            </div> -->
+
+            <div class="navbar__title">
+        <h1 class="title__workWhitUs"><i class="fa-solid fa-briefcase"></i> Bolsa de trabajo</h1>
+            </div>
         </div>
 
     </nav>
@@ -116,9 +119,12 @@
 
     </footer>
 
-    <a href="#body"><i class="fa-solid fa-circle-chevron-up"></i></a>
+
+    <div id="chevron">
+        <i class="fa-solid fa-circle-chevron-up"></i>
+    </div>
     <script src="https://kit.fontawesome.com/9682b774cb.js" crossorigin="anonymous"></script>
     <script src="../js/workWithUs.js"></script>
-    
+    <script src="../js/chevron.js"></script>
 </body>
 </html>
