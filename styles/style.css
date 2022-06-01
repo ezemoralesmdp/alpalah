@@ -39,20 +39,29 @@ html {
     background: none;
 }
 
+a:link {
+    color: lightgray;
+}
+
 a:visited {
     color: lightgray;
 }
 
-#chevron, .fa-circle-chevron-up{
+#chevron{
     display: flex;
     position: fixed;
     bottom: 0;
     right: 0;
     font-size: 35px;
-    margin-right: 6px;
+    margin-right: 12.5px;
     margin-bottom: 10px;
     color: aliceblue;
     cursor: pointer;
+    transform: scale(0);
+}
+
+#chevron, .fa-circle-chevron-up{
+    background: none;
     transition: all 600ms ease;
 }
 
@@ -77,9 +86,11 @@ a:visited {
 body::-webkit-scrollbar{
     width: 8px;
 }
+
 body::-webkit-scrollbar-track{
     background: rgb(46, 46, 46);
 }
+
 body::-webkit-scrollbar-thumb{
     background: linear-gradient(var(--background), var(--border-spinner-on)); ;
     border-radius: 80vw;
@@ -182,7 +193,7 @@ body::-webkit-scrollbar-thumb:hover{
 
 .header {
     height: 50%;
-    width: 100%;
+    width: 100%; 
     gap: 20px;
     display: flex;
     justify-content: space-evenly;
@@ -193,9 +204,7 @@ body::-webkit-scrollbar-thumb:hover{
     margin-top: 80px;
     margin-bottom: 20px;
 }
-.header__title{
-    text-shadow: 10px 10px var(--background) ;
-}
+
 .header__logo {
     height: 250px;
     width: 250px;
@@ -291,7 +300,9 @@ body::-webkit-scrollbar-thumb:hover{
     color: white;
     font-family: 'Space Mono', monospace;
     letter-spacing: 10px;
+    text-shadow: 10px 10px var(--background);
 }
+
 
 /* -------------------------------------------- [content] -------------------------------------------- */
 
@@ -574,4 +585,3 @@ body::-webkit-scrollbar-thumb:hover{
     -o-background-size: cover;
     background-size: cover;
 }
-
