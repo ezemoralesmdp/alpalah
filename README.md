@@ -1,4 +1,4 @@
-# :cocktail: alpalah
+# :cocktail: Alpalah
 Web Project. Global Learning.
 
 Students: Ezequiel Morales, Tobias Gonzales
